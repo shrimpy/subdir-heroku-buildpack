@@ -17,7 +17,6 @@ if [ -f $ENV_DIR/PROJECT_PATH ]; then
 		ORIGINAL_PROJECT_CODE=$(cd "$ORIGINAL_PROJECT_CODE_RAW"; pwd)
 		echo "       keep a copy of original code in $ORIGINAL_PROJECT_CODE"
 		cp -R $BUILD_DIR/. $ORIGINAL_PROJECT_CODE/
-		ls -la $ORIGINAL_PROJECT_CODE
 		echo "       creating cache: $CACHE_DIR"
 		mkdir -p $CACHE_DIR
 		TMP_DIR=`mktemp -d $CACHE_DIR/subdirXXXXX`
